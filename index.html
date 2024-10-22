@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .main-container {
+      height: 400px;
+      width: 280px;
+      border: 1px solid black;
+      margin: 10px auto;
+      background-color: #ffb3d1;
+      border-radius: 10px;
+      border:  2px double #ff0066;
+      
+    }
+    .watch {
+      height: 250px;
+      margin-top: 15px;
+      margin-left: 10px;
+      border-radius: 10px;
+    }
+    .plus {
+      height: 50px;
+      margin-left: 50px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .minus {
+      height: 50px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    #quatity {
+      font-size: 40px;
+    }
+    .btn{
+        height: 50px;
+        width: 150px;
+        margin-left: 50px;
+        border-radius: 10px;
+        background-color: #ccd9ff;
+       border: 2px double#1a1aff;
+    }
+  </style>
+  <body>
+    <div class="main-container">
+      <img src="./img/watch.png" alt="" class="watch" /> <br />
+
+      <img src="./img/plus.png" alt="" class="plus" onclick="inc()"/>
+
+      <span id="quatity">1</span>
+      <img src="./img/minus.png" alt="" class="minus" onclick="dec()" />
+      <button class="btn">Buy Now</button>
+      <script>
+        let quan = document.getElementById('quatity');
+        function inc() {
+            let increment =parseInt (quan.innerText);
+            quan.innerText = increment + 1;
+        }
+        function dec(){
+            let decrement = parseInt(quan.innerText);
+            if (decrement > 1) {
+                quan.innerText =decrement-1
+
+            }
+        }
+      </script>
+    
+    </div>
+  </body>
+</html>
